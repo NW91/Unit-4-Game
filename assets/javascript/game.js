@@ -73,13 +73,13 @@ function setWinLose() {
     if (playerScore === randomNum) {
         winNum++;
         $("#win-num").text(winNum);
-        $("#won-lost-notifier").text("Congrats, you've won this round! Keep playing!");
+        $("#won-lost-notifier").text("Congratulations, you've won this round! Keep on playing!");
         startGame();
     }
     else if (playerScore > randomNum) {
         loseNum++;
         $("#lose-num").text(loseNum);
-        $("#won-lost-notifier").text("Sorry, you've lost this round! Please try again!");
+        $("#won-lost-notifier").text("Sorry, but you've lost this round! Please try again!");
         startGame();
     }
 }
