@@ -1,11 +1,11 @@
 //JavaScript
 
-//Global Variables like scores and values
-
+//Crystal Values
 var crystalBlueNum;
 var crystalGreenNum;
 var crystalYellowNum;
 var crystalRedNum;
+//Score Variables
 var playerScore = 0;
 var winNum = 0;
 var loseNum = 0;
@@ -26,31 +26,46 @@ $("#randomNumber").text(Random);
 
 //Click listeners for all 4 crystals
 $("#Blue-Crystal").on("click", function(){
-    totalScoreNum += crystalBlueNum;
-    $("#total-score-num").text(totalScoreNum);
-    $("win-lose-message").text("");
+    playerScore += crystalBlueNum;
+    $("#playerScore").text(playerScore);
+    $("wonLostNotifier").text("");
     setWinLose();
 });
 
 $("#Green-Crystal").on("click", function(){
-    totalScoreNum += crystalGreenNum;
-    $("#total-score-num").text(totalScoreNum);
-    $("win-lose-message").text("");
+    playerScore += crystalGreenNum;
+    $("#playerScore").text(playerScore);
+    $("wonLostNotifier").text("");
     setWinLose();
 });
 
 $("#Yellow-Crystal").on("click", function(){
-    totalScoreNum += crystalYellowNum;
-    $("#total-score-num").text(totalScoreNum);
-    $("win-lose-message").text("");
+    playerScore += crystalYellowNum;
+    $("#playerScore").text(playerScore);
+    $("wonLostNotifier").text("");
     setWinLose();
 });
 
 ("#Red-Crystal").on("click", function(){
-    totalScoreNum += crystalRedNum;
-    $("#total-score-num").text(totalScoreNum);
-    $("win-lose-num").text(totalScoreNum);
+    playerScore += crystalRedNum;
+    $("#playerScore").text(playerScore);
+    $("wonLostNotifier").text("");
     setWinLose();
 });
+
+//Win-Loss Function Recorder and Restarts the Game
+function setWinLose(){
+    if (playerScore === randomNum) {
+        winNum++;
+        $("#win-num").text(winNum);
+        $("#wonLostNotifier").text("Congratulations, you've won this round! Keep on playing!");
+        startGame();
+    }
+    else if (playerScore > randomNum) {
+        loseNum++;
+        $("#lose-num").text(loseNum);
+        $("wonLostNotifier").text("Sorry but you've lost this round! Please try again!");
+        startGame();
+    }
 
 }
