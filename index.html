@@ -5,9 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Unit 4 Game</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--reset-->
     <link href="assets/css/reset.css" type="text/css" rel="stylesheet">
-    <link href="assets/css/style.css" type="text/css" rel="stylesheet">
+    <!--bootstrap-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <!--css style sheet-->
+    <link href="assets/css/style.css" type="text/css" rel="stylesheet">
+    <!--jquery-->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 </head>
 
@@ -38,7 +42,20 @@
     <div class="col-md-12 randomGivenScore">
         <div id="randomScore">
             <div>Your Target is: </div>
-            <div id="randomGivenScore" style="width: 120px; height: 150px; font-size: 40px"></div>
+            <div id="random-given-score" style="width: 120px; height: 150px; font-size: 40px"></div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12 wonLostBox">
+        <div id="win-lose-box">
+            <p>You win:
+                <span id="win-num"></span>
+            </p>
+            <p>You lose:
+                <span id="lose-num"></span>
+            </p>
         </div>
     </div>
 </div>
@@ -46,11 +63,11 @@
 <div class="row">
     <div class="col-md-12 scorebox">
         <div id="wonLostNotifier">
-            <p id="wonLostNotifier" class="wonLostNotifier"></p>
+            <p id="won-Lost-Notifier" class="won-Lost-Notifier"></p>
         </div>
         <div> Total Score: 
         </div>
-        <div id="playerScore" style="width: 120px; height: 180px; font-size: 40px">
+        <div id="player-score" style="width: 120px; height: 180px; font-size: 40px">
         </div>
     <div>
 <div>
@@ -58,19 +75,19 @@
 <div class="row">
     <div class="col-md-12 all crystals">
         <div id="crystal-blue-box">
-            <img id="Blue-Crystal" class="img-border blue-rotated blue-img-position" style="width: 130px; height: 120px" src="assets/images/blueCrystal.jpg">
+            <img id="blue-crystal-icon" class="img-border blue-rotated blue-img-position" style="width: 130px; height: 120px" src="assets/images/blueCrystal.jpg">
         </div>
 
         <div id="crystal-green-box">
-            <img id="Green-Crystal" class="img-border green-rotated green-img-position" style="width: 130px; height: 120px" src="assets/images/greenCrystal.jpg">
+            <img id="green-crystal-icon" class="img-border green-rotated green-img-position" style="width: 130px; height: 120px" src="assets/images/greenCrystal.jpg">
         </div>
 
         <div id="crystal-yellow-box">
-            <img id="Yellow-Crystal" class="img-border yellow-rotated yellow-img-position" style="width: 130px; height: 120px" src="assets/images/yellowCrystal.jpg">
+            <img id="yellow-crystal-icon" class="img-border yellow-rotated yellow-img-position" style="width: 130px; height: 120px" src="assets/images/yellowCrystal.jpg">
         </div>
 
         <div id="crystal-red-box">
-            <img id="Red-Crystal" class="img-border red-rotated red-img-position" style="width: 130px; height: 120px" src="assets/images/redCrystal.jpg">
+            <img id="red-crystal-icon" class="img-border red-rotated red-img-position" style="width: 130px; height: 120px" src="assets/images/redCrystal.jpg">
         </div>
     </div>
 </div>

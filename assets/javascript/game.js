@@ -12,15 +12,16 @@ var winNum = 0;
 var loseNum = 0;
 var randomNum;
 
+//Loads the Page
 $(document).ready(function() {
     startGame();
 
 //Start Game
-    function startGame() {
-        gameStarted = true;
+function startGame() {
+    gameStarted = true;
 
 //Generates random score at the start between 19 and 120
-var randomNum = Math.floor(Math.random() * 121)
+randomNum = Math.floor(Math.random() * 121)
 while (randomNum < 19) {
     randomNum = Math.floor(Math.random() * 121)
 }
@@ -44,36 +45,37 @@ crystalRedNum = 1 + Math.floor(Math.random() * 12);
 
 //Player score starts at 0
 playerScore = 0;
-$("#playerScore").text(playerScore);
+$("#player-score").text(playerScore);
 }
 
 //Click listeners for all 4 crystals
-$("#Blue-Crystal").on("click", function(){
-    playerScore += crystalBlueNum;
-    $("#playerScore").text(playerScore);
-    $("wonLostNotifier").text("");
-    setWinLose();
-});
+    $("#blue-crystal-icon").on("click", function() {
+        playerScore += crystalBlueNum;
+        $("#player-score").text(playerScore);
+        $("won-Lost-Notifier").text("");
+        setWinLose();
+    });
 
-$("#Green-Crystal").on("click", function(){
-    playerScore += crystalGreenNum;
-    $("#playerScore").text(playerScore);
-    $("wonLostNotifier").text("");
-    setWinLose();
-});
+    $("#green-crystal-icon").on("click", function() {
+        playerScore += crystalGreenNum;
+        $("#player-score").text(playerScore);
+        $("won-Lost-Notifier").text("");
+        setWinLose();
+    });
 
-$("#Yellow-Crystal").on("click", function(){
-    playerScore += crystalYellowNum;
-    $("#playerScore").text(playerScore);
-    $("wonLostNotifier").text("");
-    setWinLose();
-});
+    $("#yellow-crystal-icon").on("click", function() {
+        playerScore += crystalYellowNum;
+        $("#player-score").text(playerScore);
+        $("won-Lost-Notifier").text("");
+        setWinLose();
+    });
 
-("#Red-Crystal").on("click", function(){
-    playerScore += crystalRedNum;
-    $("#playerScore").text(playerScore);
-    $("wonLostNotifier").text("");
-    setWinLose();
+    $("#red-crystal-icon").on("click", function() {
+        playerScore += crystalRedNum;
+        $("#player-score").text(playerScore);
+        $("won-Lost-Notifier").text("");
+        setWinLose();
+    });
 });
 
 //Win-Loss Function Recorder and Restarts the Game
@@ -81,16 +83,14 @@ function setWinLose(){
     if (playerScore === randomNum) {
         winNum++;
         $("#win-num").text(winNum);
-        $("#wonLostNotifier").text("Congratulations, you've won this round! Keep on playing!");
+        $("#won-Lost-Notifier").text("Congratulations, you've won this round! Keep on playing!");
         startGame();
     }
     else if (playerScore > randomNum) {
         loseNum++;
         $("#lose-num").text(loseNum);
-        $("wonLostNotifier").text("Sorry but you've lost this round! Please try again!");
+        $("#won-Lost-Notifier").text("Sorry but you've lost this round! Please try again!");
         startGame();
     }
-
-}
 
 }
