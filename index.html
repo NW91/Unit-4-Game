@@ -12,22 +12,27 @@
 </head>
 
 <body>
-<div box>Crystals Collector!</div>
+    <div class="row">
+        <div class="col-md-12 title">
+            <div box>Crystals Collector!</div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="cold-md-12 instructions">
+            <p>Instructions:</p>
+            <br>
+            <br>
+            <p>You will be given a random number at the start of the game.</p>
 
-<div box="instructions">
-Instructions:
-<br>
-<br>
-<p>You will be given a random number at the start of the game.</p>
+            <p>There are four crystals below. By clicking on a crystal, you will add a specific amount of points to your total score.</p>
 
-<p>There are four crystals below. By clicking on a crystal, you will add a specific amount of points to your total score.</p>
+            <p>You will win the game by matching your total score to a random number, you will lose the game if your total score goes above the random number generated.</p>
 
-<p>You will win the game by matching your total score to a random number, you will lose the game if your total score goes above the random number generated.</p>
+            <p>The value of each crystal is hidden from you until you click on it.</p>
 
-<p>The value of each crystal is hidden from you until you click on it.</p>
-
-<p>Each time the game starts, the game will change the values of each crystal.</p>
-</div>
+            <p>Each time the game starts, the game will change the values of each crystal.</p>
+        </div>
+    </div>
 
 <div box="container">
     <div id="winLoseBox">
@@ -36,21 +41,23 @@ Instructions:
     </div>
 </div>
 
-<div>
-    <div id="crystal-blue-box">
-        <img id="Blue Crystal" class="img-border blue-rotated blue-img-position" style="width: 130px; height: 120px" src="assets/images/blueCrystal.jpg">
-    </div>
+<div class="row">
+    <div class="col-md-12 all crystals">
+        <div id="crystal-blue-box">
+            <img id="Blue-Crystal" class="img-border blue-rotated blue-img-position" style="width: 130px; height: 120px" src="assets/images/blueCrystal.jpg">
+        </div>
 
-    <div id="crystal-green-box">
-        <img id="Green Crystal" class="img-border green-rotated green-img-position" style="width: 130px; height: 120px" src="assets/images/greenCrystal.jpg">
-    </div>
+        <div id="crystal-green-box">
+            <img id="Green-Crystal" class="img-border green-rotated green-img-position" style="width: 130px; height: 120px" src="assets/images/greenCrystal.jpg">
+        </div>
 
-    <div id="crystal-yellow-box">
-        <img id="Yellow Crystal" class="img-border yellow-rotated yellow-img-position" style="width: 130px; height: 120px" src="assets/images/yellowCrystal.jpg">
-    </div>
+        <div id="crystal-yellow-box">
+            <img id="Yellow-Crystal" class="img-border yellow-rotated yellow-img-position" style="width: 130px; height: 120px" src="assets/images/yellowCrystal.jpg">
+        </div>
 
-    <div id="crystal-red-box">
-        <img id="Red Crystal" class="img-border red-rotated red-img-position" style="width: 130px; height: 120px" src="assets/images/redCrystal.jpg">
+        <div id="crystal-red-box">
+            <img id="Red-Crystal" class="img-border red-rotated red-img-position" style="width: 130px; height: 120px" src="assets/images/redCrystal.jpg">
+        </div>
     </div>
 </div>
 
