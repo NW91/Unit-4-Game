@@ -6,23 +6,46 @@ var crystalGreenNum;
 var crystalYellowNum;
 var crystalRedNum;
 //Score Variables
+var gameStarted = false;
 var playerScore = 0;
 var winNum = 0;
 var loseNum = 0;
-var randomNum = "";
+var randomNum;
 
 $(document).ready(function() {
     startGame();
 
-//Random Crystal values between 1 to 12
-var crystalBlueNum = Math.floor(Math.random() * 11+1);
-var crystalGreenNum = Math.floor(Math.random() * 11+1);
-var crystalYellowNum = Math.floor(Math.random() * 11+1);
-var crystalRedNum = Math.floor(Math.random() * 11+1);
+//Start Game
+    function startGame() {
+        gameStarted = true;
 
 //Generates random score at the start between 19 and 120
-var randomNum = Math.floor(Math.random)() * 101+19)
-$("#randomNumber").text(Random);
+var randomNum = Math.floor(Math.random() * 121)
+while (randomNum < 19) {
+    randomNum = Math.floor(Math.random() * 121)
+}
+$("#randomGivenScore").text(randomNum);
+
+//Code to make the crystal values all different from each other and assign the crystals random values between 1 to 12
+while (
+    crystalBlueNum === crystalGreenNum ||
+    crystalBlueNum === crystalYellowNum ||
+    crystalBlumNum === crystalRedNum ||
+    crystalGreenNum === crystalYellowNum ||
+    crystalGreenNum === crystalRedNum ||
+    crystalYellowNum === crystalRedNum
+) {
+
+crystalBlueNum = 1 + Math.floor(Math.random() * 12);
+crystalGreenNum = 1 + Math.floor(Math.random() * 12);
+crystalYellowNum = 1 + Math.floor(Math.random() * 12);
+crystalRedNum = 1 + Math.floor(Math.random() * 12);
+}
+
+//Player score starts at 0
+playerScore = 0;
+$("#playerScore").text(playerScore);
+}
 
 //Click listeners for all 4 crystals
 $("#Blue-Crystal").on("click", function(){
@@ -67,5 +90,7 @@ function setWinLose(){
         $("wonLostNotifier").text("Sorry but you've lost this round! Please try again!");
         startGame();
     }
+
+}
 
 }
