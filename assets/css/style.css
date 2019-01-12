@@ -6,7 +6,7 @@ body, html {
   }
   .bg {
     /* The image used */
-    background-image: url("../images/lightsBackground.jpg");
+    background-image: url("../images/marbleBackground.jpg");
   
     /* Full height */
     height: 100%;
@@ -17,12 +17,12 @@ body, html {
     background-size: cover;
   }
 
-.header {
+.container-title {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color:whitesmoke;
 }
 
 .instructions {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color: azure;
+    color: rgb(45, 49, 49);
 };
