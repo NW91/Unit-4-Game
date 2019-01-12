@@ -46,7 +46,7 @@ $(document).ready(function() {
     });
 });
 
-//Start the Game
+//Starts the Game
 function startGame() {
     gameStarted = true;
 
@@ -57,22 +57,13 @@ while (randomNum < 19) {
 }
 $("#random-given-score").text(randomNum);
 
-// //Assign the crystals random values between 1 to 12
-// while (
-//     crystalBlueNum === crystalGreenNum ||
-//     crystalBlueNum === crystalYellowNum ||
-//     crystalBlueNum === crystalRedNum ||
-//     crystalGreenNum === crystalYellowNum ||
-//     crystalGreenNum === crystalRedNum ||
-//     crystalYellowNum === crystalRedNum
-// ) {
-
+//Assigns the crystals random values between 1 to 12
 crystalBlueNum = 1 + Math.floor(Math.random() * 12);
 crystalGreenNum = 1 + Math.floor(Math.random() * 12);
 crystalYellowNum = 1 + Math.floor(Math.random() * 12);
 crystalRedNum = 1 + Math.floor(Math.random() * 12);
 
-//Player score starts at 0
+//Player score begins at 0
 playerScore = 0;
 $("#total-player-num").text(playerScore);
 }
@@ -94,3 +85,13 @@ function setWinLose() {
 }
 
 startGame();
+
+// //Crystals cannot equal each other
+// while (
+//     crystalBlueNum === crystalGreenNum ||
+//     crystalBlueNum === crystalYellowNum ||
+//     crystalBlueNum === crystalRedNum ||
+//     crystalGreenNum === crystalYellowNum ||
+//     crystalGreenNum === crystalRedNum ||
+//     crystalYellowNum === crystalRedNum
+// ) {
