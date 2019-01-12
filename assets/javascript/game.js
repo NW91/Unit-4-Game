@@ -18,28 +18,28 @@ $(document).ready(function() {
 
 //Click listeners for all 4 crystals
     $("#blue-crystal-icon-img").on("click", function() {
-        playerScore += crystalBlueNum;
+        playerScore = crystalBlueNum + playerScore;
         $("#total-player-num").text(playerScore);
         $("won-lost-notifier").text("");
         setWinLose();
     });
 
     $("#green-crystal-icon-img").on("click", function() {
-        playerScore += crystalGreenNum;
+        playerScore += crystalGreenNum + playerScore;
         $("#total-player-num").text(playerScore);
         $("won-lost-notifier").text("");
         setWinLose();
     });
 
     $("#yellow-crystal-icon-img").on("click", function() {
-        playerScore += crystalYellowNum;
+        playerScore = crystalYellowNum + playerScore;
         $("#total-player-num").text(playerScore);
         $("won-lost-notifier").text("");
         setWinLose();
     });
 
     $("#red-crystal-icon-img").on("click", function() {
-        playerScore += crystalRedNum;
+        playerScore = crystalRedNum + playerScore;
         $("#total-player-num").text(playerScore);
         $("won-lost-notifier").text("");
         setWinLose();
@@ -57,21 +57,20 @@ while (randomNum < 19) {
 }
 $("#random-given-score").text(randomNum);
 
-//Code to make the crystal values all different from each other and assign the crystals random values between 1 to 12
-while (
-    crystalBlueNum === crystalGreenNum ||
-    crystalBlueNum === crystalYellowNum ||
-    crystalBlumNum === crystalRedNum ||
-    crystalGreenNum === crystalYellowNum ||
-    crystalGreenNum === crystalRedNum ||
-    crystalYellowNum === crystalRedNum
-) {
+// //Assign the crystals random values between 1 to 12
+// while (
+//     crystalBlueNum === crystalGreenNum ||
+//     crystalBlueNum === crystalYellowNum ||
+//     crystalBlueNum === crystalRedNum ||
+//     crystalGreenNum === crystalYellowNum ||
+//     crystalGreenNum === crystalRedNum ||
+//     crystalYellowNum === crystalRedNum
+// ) {
 
 crystalBlueNum = 1 + Math.floor(Math.random() * 12);
 crystalGreenNum = 1 + Math.floor(Math.random() * 12);
 crystalYellowNum = 1 + Math.floor(Math.random() * 12);
 crystalRedNum = 1 + Math.floor(Math.random() * 12);
-}
 
 //Player score starts at 0
 playerScore = 0;
@@ -93,3 +92,5 @@ function setWinLose() {
         startGame();
     }
 }
+
+startGame();
